@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ConsejosActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -16,40 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
-
-        <Button
-            android:id="@+id/consBtn"
-            android:layout_width="76dp"
-            android:layout_height="98dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="64dp"
-            android:background="@drawable/cons"
-            app:layout_constraintEnd_toStartOf="@+id/repBtn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cl" />
-
-        <Button
-            android:id="@+id/repBtn"
-            android:layout_width="76dp"
-            android:layout_height="98dp"
-            android:layout_marginStart="54dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="54dp"
-            android:background="@drawable/rep"
-            app:layout_constraintEnd_toStartOf="@+id/mapBtn"
-            app:layout_constraintStart_toEndOf="@+id/consBtn"
-            app:layout_constraintTop_toBottomOf="@+id/cl" />
-
-        <Button
-            android:id="@+id/mapBtn"
-            android:layout_width="76dp"
-            android:layout_height="98dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="50dp"
-            android:background="@drawable/map"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/repBtn"
-            app:layout_constraintTop_toBottomOf="@+id/cl" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl"
