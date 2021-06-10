@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/nickTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="68dp"
@@ -32,7 +32,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cl" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/advTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -43,7 +43,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/nickTv" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl"
@@ -78,6 +78,7 @@
                 android:id="@+id/imageView3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -157,7 +158,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cl" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/publiBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
@@ -169,7 +170,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/advTv" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

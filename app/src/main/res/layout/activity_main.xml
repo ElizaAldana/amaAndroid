@@ -81,70 +81,71 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/rect" />
 
             <Button
-                android:id="@+id/reportBtn2"
+                android:id="@+id/reportBtn"
                 android:layout_width="37.87dp"
                 android:layout_height="45.03dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/reporta"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/homeBtn2"
+                app:layout_constraintEnd_toStartOf="@+id/homeBtn"
                 app:layout_constraintHorizontal_bias="0.506"
-                app:layout_constraintStart_toEndOf="@+id/perfilBtn2"
+                app:layout_constraintStart_toEndOf="@+id/perfilBtn"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.666" />
 
             <Button
-                android:id="@+id/homeBtn2"
+                android:id="@+id/homeBtn"
                 android:layout_width="22.7dp"
                 android:layout_height="36.1dp"
                 android:background="@drawable/homea"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-                app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/puntosBtn2"
+                android:id="@+id/puntosBtn"
                 android:layout_width="30.06dp"
                 android:layout_height="38.1dp"
                 android:background="@drawable/puntosa"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/consejosBtn2"
-                app:layout_constraintStart_toEndOf="@+id/homeBtn2"
+                app:layout_constraintEnd_toStartOf="@+id/consejosBtn"
+                app:layout_constraintStart_toEndOf="@+id/homeBtn"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/perfilBtn2"
+                android:id="@+id/perfilBtn"
                 android:layout_width="21.31dp"
                 android:layout_height="37.1dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/perfila"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/homeBtn2"
-                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/homeBtn"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.647" />
 
             <Button
-                android:id="@+id/consejosBtn2"
+                android:id="@+id/consejosBtn"
                 android:layout_width="40.37dp"
                 android:layout_height="41.13dp"
                 android:layout_marginStart="50dp"
                 android:background="@drawable/consejoa"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintHorizontal_bias="0.503"
-                app:layout_constraintStart_toEndOf="@+id/homeBtn2"
+                app:layout_constraintStart_toEndOf="@+id/homeBtn"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
