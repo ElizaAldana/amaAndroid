@@ -11,6 +11,7 @@
         android:theme="@style/Theme.Ama">
         <activity android:name=".PerfilActivity"></activity>
         <activity android:name=".ConsejosActivity" />
+        <activity android:name=".RegistroActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
