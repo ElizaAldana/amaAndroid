@@ -2,12 +2,15 @@ package com.example.ama;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,6 +22,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
     private EditText nombreInput, contrasenaInput, confirmInput, emailInput, ciudadInput;
     private Button registerBtn;
     private TextView ingresarTxt;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_registro);
 
         db = FirebaseDatabase.getInstance();
+        auth = FirebaseAuth.getInstance();
         nombreInput = findViewById(R.id.nombreInput);
         contrasenaInput = findViewById(R.id.contrasenaInput);
         confirmInput = findViewById(R.id.confirmInput);
@@ -42,17 +47,33 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.registerBtn:
-                String id = UUID.randomUUID().toString();
-                DatabaseReference reference = db.getReference().child("users").child("registrados").child(UUID.randomUUID().toString());
-                Users user = new Users(
-                        nombreInput.getText().toString(),
-                        emailInput.getText().toString(),
-                        contrasenaInput.getText().toString(),
-                        confirmInput.getText().toString(),
-                        ciudadInput.getText().toString(),
-                        id
+                auth.createUserWithEmailAndPassword(emailInput.getText().toString(), contrasenaInput.getText().toString())
+                        .addOnCompleteListener(
+                                task -> {
+                                   if(task.isSuccessful()){
+                                       String id = auth.getCurrentUser().getUid();
+                                       Users user = new Users(
+                                               nombreInput.getText().toString(),
+                                               emailInput.getText().toString(),
+                                               contrasenaInput.getText().toString(),
+                                               confirmInput.getText().toString(),
+                                               ciudadInput.getText().toString(),
+                                               id
+                                       );
+                                       db.getReference().child("users").child("registrados").child(id).setValue(user).addOnCompleteListener(
+                                               taskdb -> {
+                                                   if(taskdb.isSuccessful()){
+                                                       Intent r = new Intent(this, PerfilActivity.class);
+                                                       startActivity(r);
+                                                       finish();
+                                                   }
+                                               }
+                                       );
+                                   }else{
+                                       Toast.makeText(this,task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                   }
+                                }
                         );
-                reference.setValue(user);
                 break;
         }
     }
