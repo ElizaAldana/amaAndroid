@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private FirebaseDatabase db;
     private Button consBtn, repBtn, mapBtn, pBtn;
     //Para separar la barra de busqueda
     private Button perfilBtn, reportBtn, homeBtn, puntosBtn, consejosBtn;
