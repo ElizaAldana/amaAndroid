@@ -30,6 +30,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         contrasenaInput = findViewById(R.id.contrasenaInput);
         confirmInput = findViewById(R.id.confirmInput);
         emailInput = findViewById(R.id.emailInput);
+        ciudadInput = findViewById(R.id.ciudadInput);
         registerBtn = findViewById(R.id.registerBtn);
         ingresarTxt = findViewById(R.id.ingresarTxt);
 
@@ -41,7 +42,17 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.registerBtn:
+                String id = UUID.randomUUID().toString();
                 DatabaseReference reference = db.getReference().child("users").child("registrados").child(UUID.randomUUID().toString());
+                Users user = new Users(
+                        nombreInput.getText().toString(),
+                        emailInput.getText().toString(),
+                        contrasenaInput.getText().toString(),
+                        confirmInput.getText().toString(),
+                        ciudadInput.getText().toString(),
+                        id
+                        );
+                reference.setValue(user);
                 break;
         }
     }
