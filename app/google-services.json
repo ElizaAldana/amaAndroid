@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "328015409105",
+    "firebase_url": "https://ecosistemas-4779c-default-rtdb.firebaseio.com",
+    "project_id": "ecosistemas-4779c",
+    "storage_bucket": "ecosistemas-4779c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328015409105:android:d57fa216314c195ab8faf0",
+        "android_client_info": {
+          "package_name": "com.example.ama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328015409105-vgasbjqu7mjljtb9k0seh50jacjq6pke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1a7Kn8BzWEZIf2vXzB6HyOVqJNf4FWyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328015409105-vgasbjqu7mjljtb9k0seh50jacjq6pke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328015409105:android:32ee3be8e60816a0b8faf0",
+        "android_client_info": {
+          "package_name": "com.example.sem14"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328015409105-vgasbjqu7mjljtb9k0seh50jacjq6pke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1a7Kn8BzWEZIf2vXzB6HyOVqJNf4FWyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328015409105-vgasbjqu7mjljtb9k0seh50jacjq6pke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
