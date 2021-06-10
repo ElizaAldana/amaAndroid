@@ -38,6 +38,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Intent i = new Intent(this, RegistroActivity.class);
                 startActivity(i);
                 break;
+            case R.id.ingresarBtn:
+                Intent a = new Intent(this, MainActivity.class);
+                startActivity(a);
         }
     }
 }

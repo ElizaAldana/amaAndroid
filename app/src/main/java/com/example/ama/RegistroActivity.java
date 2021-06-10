@@ -63,7 +63,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
                                        db.getReference().child("users").child("registrados").child(id).setValue(user).addOnCompleteListener(
                                                taskdb -> {
                                                    if(taskdb.isSuccessful()){
-                                                       Intent r = new Intent(this, PerfilActivity.class);
+                                                       Intent r = new Intent(this, MainActivity.class);
                                                        startActivity(r);
                                                        finish();
                                                    }
