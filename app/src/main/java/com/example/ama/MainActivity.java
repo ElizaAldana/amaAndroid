@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.consBtn:
                 Intent a = new Intent(this, ConsejosActivity.class);
                 startActivity(a);
+                break;
+            case R.id.puntosBtn:
+                Intent p = new Intent(this, MapaListActivity.class);
+                startActivity(p);
+                break;
         }
 
     }
