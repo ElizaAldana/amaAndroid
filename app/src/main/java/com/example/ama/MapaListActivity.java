@@ -92,6 +92,13 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
                 Intent h = new Intent(this, MainActivity.class);
                 startActivity(h);
                 break;
+
+            case R.id.agregarLugarBtn:
+
+                Intent a = new Intent(this, AddLocationActivity.class);
+                startActivity(a);
+
+                break;
         }
 
     }
