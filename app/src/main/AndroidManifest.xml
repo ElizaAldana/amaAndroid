@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ama">
         <activity android:name=".MapaListActivity"></activity>
+        <activity android:name=".ReportarActivity"></activity>
         <activity android:name=".PerfilActivity" />
         <activity android:name=".ConsejosActivity" />
         <activity android:name=".MainActivity" />

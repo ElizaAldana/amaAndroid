@@ -17,6 +17,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <Button
+            android:id="@+id/cerrarBtn2"
+            android:layout_width="128dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="48dp"
+            android:background="@android:drawable/editbox_background"
+            android:fontFamily="@font/robotobold"
+            android:text="Cerrar sesión"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#006A4E"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.883"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cl" />
+
         <EditText
             android:id="@+id/nickTv"
             android:layout_width="wrap_content"
@@ -55,7 +72,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <Button
-                android:id="@+id/pBtn"
+                android:id="@+id/pBtn2"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="354dp"
@@ -159,18 +176,38 @@
 
         <Button
             android:id="@+id/publiBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
+            android:layout_width="111dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
             android:background="#006A4E"
             android:fontFamily="@font/robotocondensedbold"
             android:text="Publicar"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="14sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/advTv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="326dp"
+            android:layout_height="397dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/dataTv"
+                android:layout_width="0dp"
+                android:layout_height="346dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

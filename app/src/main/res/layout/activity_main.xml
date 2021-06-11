@@ -17,39 +17,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <Button
-            android:id="@+id/consBtn"
-            android:layout_width="76dp"
-            android:layout_height="98dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="64dp"
-            android:background="@drawable/cons"
-            app:layout_constraintEnd_toStartOf="@+id/repBtn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cl" />
 
         <Button
-            android:id="@+id/repBtn"
-            android:layout_width="76dp"
-            android:layout_height="98dp"
-            android:layout_marginStart="54dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="54dp"
-            android:background="@drawable/rep"
-            app:layout_constraintEnd_toStartOf="@+id/mapBtn"
-            app:layout_constraintStart_toEndOf="@+id/consBtn"
-            app:layout_constraintTop_toBottomOf="@+id/cl" />
-
-        <Button
-            android:id="@+id/mapBtn"
-            android:layout_width="76dp"
-            android:layout_height="98dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="50dp"
-            android:background="@drawable/map"
+            android:id="@+id/cerrarBtn"
+            android:layout_width="128dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="48dp"
+            android:background="@android:drawable/editbox_background"
+            android:fontFamily="@font/robotobold"
+            android:text="Cerrar sesión"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#006A4E"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/repBtn"
-            app:layout_constraintTop_toBottomOf="@+id/cl" />
+            app:layout_constraintHorizontal_bias="0.883"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cl" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl"
@@ -71,9 +55,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -148,6 +134,58 @@
                 app:layout_constraintStart_toEndOf="@+id/homeBtn"
                 app:layout_constraintTop_toTopOf="parent" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="338dp"
+            android:layout_height="633dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl">
+
+            <Button
+                android:id="@+id/consBtn"
+                android:layout_width="76dp"
+                android:layout_height="98dp"
+                android:layout_marginTop="76dp"
+                android:background="@drawable/cons"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/repBtn"
+                android:layout_width="76dp"
+                android:layout_height="98dp"
+                android:layout_marginTop="76dp"
+                android:background="@drawable/rep"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/mapBtn"
+                android:layout_width="76dp"
+                android:layout_height="98dp"
+                android:layout_marginTop="76dp"
+                android:background="@drawable/map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.938"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.375" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
