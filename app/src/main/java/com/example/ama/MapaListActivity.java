@@ -25,8 +25,7 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
 
     private FirebaseDatabase db;
     private ListView lugaresList;
-    private ImageView perfilBtn4, puntosBtn4, consejosBtn4, pBtn4,reportBtn4, homeBtn4;
-    private Button agregarLugarBtn;
+    private Button perfilBtn4, puntosBtn4, consejosBtn4, pBtn4,reportBtn4, homeBtn4, agregarLugarBtn;
     private ArrayList<Location> dataLocations;
     private ArrayAdapter<Location> adapter;
 

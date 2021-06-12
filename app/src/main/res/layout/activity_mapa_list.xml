@@ -15,107 +15,108 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/imageView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/rect" />
 
-        <ImageView
+        <Button
+            android:id="@+id/reportBtn4"
+            android:layout_width="37.87dp"
+            android:layout_height="45.03dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/reporta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/homeBtn4"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toEndOf="@+id/perfilBtn4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666" />
+
+        <Button
             android:id="@+id/homeBtn4"
             android:layout_width="22.7dp"
             android:layout_height="36.1dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            android:background="@drawable/homea"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView5"
-            app:layout_constraintVertical_bias="0.461"
-            app:srcCompat="@drawable/homea" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <Button
             android:id="@+id/puntosBtn4"
             android:layout_width="30.06dp"
-            android:layout_height="wrap_content"
+            android:layout_height="38.1dp"
+            android:background="@drawable/puntosa"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/consejosBtn4"
-            app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toEndOf="@+id/homeBtn4"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.391"
-            app:srcCompat="@drawable/puntosa" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <Button
             android:id="@+id/perfilBtn4"
             android:layout_width="21.31dp"
             android:layout_height="37.1dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="8dp"
+            android:background="@drawable/perfila"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/homeBtn4"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.647"
-            app:srcCompat="@drawable/perfila" />
+            app:layout_constraintVertical_bias="0.647" />
 
-        <ImageView
+        <Button
             android:id="@+id/consejosBtn4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40.37dp"
+            android:layout_height="41.13dp"
             android:layout_marginStart="50dp"
+            android:background="@drawable/consejoa"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toEndOf="@+id/homeBtn4"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.4"
-            app:srcCompat="@drawable/consejoa" />
-
-        <ImageView
-            android:id="@+id/reportBtn4"
-            android:layout_width="37.87dp"
-            android:layout_height="45.03dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/homeBtn4"
-            app:layout_constraintStart_toEndOf="@+id/perfilBtn4"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/reporta" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="60dp"
         android:background="#006A4E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <Button
             android:id="@+id/pBtn4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="354dp"
             android:layout_marginEnd="37dp"
+            android:background="@drawable/profile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/profile" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Puntos de reciclaje"
         android:textColor="#006A4E"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cl" />
 
