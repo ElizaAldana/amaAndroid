@@ -16,8 +16,9 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -32,6 +33,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.461"
             app:srcCompat="@drawable/homea" />
 
         <ImageView
@@ -40,9 +42,10 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/consejosBtn4"
+            app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toEndOf="@+id/homeBtn4"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.521"
+            app:layout_constraintVertical_bias="0.391"
             app:srcCompat="@drawable/puntosa" />
 
         <ImageView
@@ -53,8 +56,10 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/homeBtn4"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.647"
             app:srcCompat="@drawable/perfila" />
 
         <ImageView
@@ -66,6 +71,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView5"
             app:layout_constraintStart_toEndOf="@+id/homeBtn4"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"
             app:srcCompat="@drawable/consejoa" />
 
         <ImageView
