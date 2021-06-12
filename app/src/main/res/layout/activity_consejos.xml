@@ -43,6 +43,7 @@
             android:fontFamily="@font/robotoregular"
             android:hint="Nickname"
             android:inputType="textPersonName"
+            android:text="gPLAzf29pJSGMq8cK7VXmC8lXtV2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"

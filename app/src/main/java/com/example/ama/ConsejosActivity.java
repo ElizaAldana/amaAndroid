@@ -1,17 +1,28 @@
 package com.example.ama;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ConsejosActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public Button reportBtn2, homeBtn2, puntosBtn2, perfilBtn2, consejosBtn2, pBtn2, cerrarBtn2, publiBtn;
-    public TextView nickTv, advTv;
+    private Button reportBtn2, homeBtn2, puntosBtn2, perfilBtn2, consejosBtn2, pBtn2, cerrarBtn2, publiBtn;
+    private TextView  dataTv;
+    private EditText nickTv, advTv;
+    private FirebaseDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +37,10 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
         pBtn2 = findViewById(R.id.pBtn2);
         cerrarBtn2 = findViewById(R.id.cerrarBtn2);
         publiBtn = findViewById(R.id.publiBtn);
-
-
+        
         nickTv = findViewById(R.id.nickTv);
         advTv = findViewById(R.id.advTv);
+        dataTv = findViewById(R.id.dataTv);
 
         reportBtn2.setOnClickListener(this);
         homeBtn2.setOnClickListener(this);
@@ -40,6 +51,37 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
         cerrarBtn2.setOnClickListener(this);
         publiBtn.setOnClickListener(this);
 
+        dataTv.setMovementMethod(new ScrollingMovementMethod());
+
+
+        
+        db = FirebaseDatabase.getInstance();
+        loadDatabase();
+
+
+    }
+
+    private void loadDatabase() {
+        DatabaseReference ref = db.getReference().child("users").child("registrados");
+        ref.addValueEventListener(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot data) {
+                        dataTv.setText("");
+                        for (DataSnapshot child : data.getChildren()){
+                            Users userN = child.getValue(Users.class);
+                            dataTv.append(userN.getNombre() + "\n");
+                            dataTv.append(advTv.getText());
+                            advTv.setText(null);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+
+                    }
+                }
+        );
     }
 
     public void onClick(View v) {
@@ -66,16 +108,26 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(d);
                 finishAfterTransition();
                 break;
-            case R.id.consejosBtn2:
-                Intent a = new Intent(this, ConsejosActivity.class);
-                startActivity(a);
-                finishAfterTransition();
-                break;
             case R.id.publiBtn:
-                Intent p = new Intent(this, MainActivity.class);
-                startActivity(p);
-                finishAfterTransition();
+                db.getReference().child("users").child("registrados").child(nickTv.getText().toString()).addListenerForSingleValueEvent(
+                        new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot data) {
+                                Users users = data.getValue(Users.class);
+                                dataTv.setText("");
+                                dataTv.append(users.getNombre() + "\n");
+                                dataTv.append(advTv.getText());
+                                advTv.setText(null);
+                            }
+
+                            @Override
+                            public void onCancelled(DatabaseError error) {
+
+                            }
+                        }
+                );//ONCE
                 break;
+
 
 
         }
