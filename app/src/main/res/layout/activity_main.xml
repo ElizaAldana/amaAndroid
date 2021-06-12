@@ -148,7 +148,7 @@
                 android:id="@+id/consBtn"
                 android:layout_width="76dp"
                 android:layout_height="98dp"
-                android:layout_marginTop="76dp"
+                android:layout_marginTop="70dp"
                 android:background="@drawable/cons"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.061"
@@ -159,7 +159,7 @@
                 android:id="@+id/repBtn"
                 android:layout_width="76dp"
                 android:layout_height="98dp"
-                android:layout_marginTop="76dp"
+                android:layout_marginTop="70dp"
                 android:background="@drawable/rep"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -169,23 +169,87 @@
                 android:id="@+id/mapBtn"
                 android:layout_width="76dp"
                 android:layout_height="98dp"
-                android:layout_marginTop="76dp"
+                android:layout_marginTop="70dp"
                 android:background="@drawable/map"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.938"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="400dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.375" />
+                app:layout_constraintTop_toBottomOf="@+id/repBtn">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="188dp"
+                    app:cardBackgroundColor="#99B8D5CD"
+                    app:cardCornerRadius="8pt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="306dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="5pt"
+                        android:text="Reune todos los objetos como agujas, bisturí, pedazos de cristal, cuchillos viejos, y demás, y ponlos todos dentro de un recipiente con tapa, puede ser una caja, o un frasco plástico. Esto para que los recolectores de basuras no lastimen sus manos al tocar la bolsa con los residuos."
+                        android:textAlignment="textStart"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/robotocondensedbold"
+                        android:text="¿Cómo desechar objetos cortopunzantes?"
+                        android:textColor="#006A4E" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#99B8D5CD"
+                    app:cardCornerRadius="8pt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="306dp"
+                        android:layout_height="105dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="5pt"
+                        android:text="Para entregar los residuos de medicamentos incluidos en el posconsumo se debe tener en cuenta:  Reunir los medicamentos vencidos, empaques y cajas, frascos y ampolletas en una bolsa resistente.Verificar que frascos y envases que contengan líquidos estén bien cerrados. Destruya parcialmente las etiquetas y marcas para evitar su falsificación."
+                        android:textAlignment="textStart"
+                        android:textColor="#333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/robotocondensedbold"
+                        android:text="¿Cómo entregar medicamentos?"
+                        android:textColor="#006A4E" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

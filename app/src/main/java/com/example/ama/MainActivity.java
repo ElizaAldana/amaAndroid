@@ -79,10 +79,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 finishAfterTransition();
                 break;
             case R.id.puntosBtn:
-                Intent p = new Intent(this, MapaListActivity.class);
+                Intent p = new Intent(this, AddLocationActivity.class);
                 startActivity(p);
                 finishAfterTransition();
-
+            case R.id.mapBtn:
+                Intent m = new Intent(this, MapaListActivity.class);
+                startActivity(m);
+                finishAfterTransition();
 
         }
 

@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".ReportarActivity">
 
+    <Button
+        android:id="@+id/cerrarBtn3"
+        android:layout_width="128dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="52dp"
+        android:background="@android:drawable/editbox_background"
+        android:fontFamily="@font/robotobold"
+        android:text="Cerrar sesión"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#006A4E"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -84,8 +101,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="316dp"
-        android:layout_height="626dp"
+        android:layout_width="313dp"
+        android:layout_height="581dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,27 +136,23 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="0dp"
-            android:layout_height="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:layout_marginTop="45dp"
+            app:cardCornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tituloTxt">
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="136dp"
-                android:layout_height="43dp"
-                android:text="Descripción:"
-                android:textSize="18sp" />
-
             <EditText
-                android:id="@+id/descTxt"
+                android:id="@+id/editTextTextPersonName"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
                 android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine" />
+                android:hint="Descripción"
+                android:inputType="textPersonName" />
+
         </androidx.cardview.widget.CardView>
 
         <ImageView

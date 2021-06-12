@@ -17,51 +17,86 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <Button
-            android:id="@+id/cerrarBtn2"
-            android:layout_width="128dp"
-            android:layout_height="41dp"
-            android:layout_marginTop="48dp"
-            android:background="@android:drawable/editbox_background"
-            android:fontFamily="@font/robotobold"
-            android:text="Cerrar sesión"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="#006A4E"
-            android:visibility="invisible"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout7"
+            android:layout_width="396dp"
+            android:layout_height="321dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.883"
+            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cl" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/nickTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
-            android:ems="10"
-            android:fontFamily="@font/robotoregular"
-            android:hint="Nickname"
-            android:inputType="textPersonName"
-            android:text="gPLAzf29pJSGMq8cK7VXmC8lXtV2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cl" />
+            <EditText
+                android:id="@+id/advTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:fontFamily="@font/robotoregular"
+                android:hint="Tu consejo"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tituloEt" />
 
-        <EditText
-            android:id="@+id/advTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:ems="10"
-            android:fontFamily="@font/robotoregular"
-            android:hint="Tu consejo"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nickTv" />
+            <EditText
+                android:id="@+id/tituloEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:fontFamily="@font/robotoregular"
+                android:hint="Título"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/robotocondensedbold"
+                android:text="Escribe tu consejo"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/cerrarBtn2"
+                android:layout_width="128dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="52dp"
+                android:background="@android:drawable/editbox_background"
+                android:fontFamily="@font/robotobold"
+                android:text="Cerrar sesión"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#006A4E"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.939"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/publiBtn"
+                android:layout_width="111dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:background="#006A4E"
+                android:fontFamily="@font/robotocondensedbold"
+                android:text="Publicar"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/advTv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl"
@@ -86,20 +121,26 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/constraintLayout8"
+            android:layout_width="397dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="51dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="68dp"
+                android:layout_marginTop="8dp"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/rect" />
 
             <Button
@@ -162,52 +203,25 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/robotocondensedbold"
-            android:text="Escribe tu consejo"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cl" />
-
-        <Button
-            android:id="@+id/publiBtn"
-            android:layout_width="111dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="16dp"
-            android:background="#006A4E"
-            android:fontFamily="@font/robotocondensedbold"
-            android:text="Publicar"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/advTv" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="326dp"
-            android:layout_height="397dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/constraintLayout6"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
-            <TextView
+            <ListView
                 android:id="@+id/dataTv"
                 android:layout_width="0dp"
-                android:layout_height="346dp"
-                android:layout_marginTop="4dp"
+                android:layout_height="339dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
