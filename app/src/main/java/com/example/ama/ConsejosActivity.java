@@ -85,6 +85,7 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
                         public void onDataChange(DataSnapshot snapshot) {
                             Users user = snapshot.getValue(Users.class);
                             idUsername = user.getNombre();
+
                         }
 
                         @Override
