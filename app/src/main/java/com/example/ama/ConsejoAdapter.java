@@ -5,11 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class ConsejoAdapter extends BaseAdapter {
 
@@ -53,7 +51,7 @@ public class ConsejoAdapter extends BaseAdapter {
 
         Consejos consejo = consejos.get(pos);
 
-        TextView tituloView = renglonView.findViewById(R.id.tituloView);
+        TextView tituloView = renglonView.findViewById(R.id.tituloPerf);
         TextView nombreView = renglonView.findViewById(R.id.nombreView);
         TextView advView = renglonView.findViewById(R.id.advView);
         TextView responderBtn = renglonView.findViewById(R.id.responderBtn);

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,6 +20,7 @@ public class PerfilActivity extends AppCompatActivity {
     private TextView userId, emailId, ciudadId;
     private Button perfilBtn3, reportBtn3, homeBtn3, puntosBtn3, consejosBtn3;
 
+    private ListView
     private FirebaseDatabase db;
     private FirebaseAuth auth;
 
