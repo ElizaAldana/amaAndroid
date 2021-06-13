@@ -25,7 +25,7 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
 
     private FirebaseDatabase db;
     private ListView lugaresList;
-    private Button perfilBtn4, puntosBtn4, consejosBtn4, pBtn4,reportBtn4, homeBtn4, agregarLugarBtn;
+    private Button perfilBtn4, puntosBtn4, consejosBtn4, reportBtn4, homeBtn4, agregarLugarBtn;
     private LocationAdaptador adapter;
 
     @Override
@@ -34,7 +34,6 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_mapa_list);
 
         db = FirebaseDatabase.getInstance();
-        pBtn4 = findViewById(R.id.pBtn4);
         perfilBtn4 = findViewById(R.id.perfilBtn4);
         reportBtn4 = findViewById(R.id.reportBtn4);
         homeBtn4 = findViewById(R.id.homeBtn4);
@@ -89,6 +88,26 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
             case R.id.homeBtn4:
                 Intent h = new Intent(this, MainActivity.class);
                 startActivity(h);
+                break;
+            case R.id.reportBtn4:
+                Intent r = new Intent(this, ReportarActivity.class);
+                startActivity(r);
+                finish();
+                break;
+            case R.id.puntosBtn4:
+                Intent pu = new Intent(this, MapaListActivity.class);
+                startActivity(pu);
+                finish();
+                break;
+            case R.id.consejosBtn4:
+                Intent c = new Intent(this, ConsejosActivity.class);
+                startActivity(c);
+                finish();
+                break;
+            case R.id.perfilBtn4:
+                Intent pe = new Intent(this, PerfilActivity.class);
+                startActivity(pe);
+                finish();
                 break;
 
             case R.id.agregarLugarBtn:

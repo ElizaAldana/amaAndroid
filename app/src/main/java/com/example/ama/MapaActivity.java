@@ -21,7 +21,7 @@ public class MapaActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseDatabase db;
     private ImageView mapImage;
     private TextView locationDir, locationDesc, locationHor, locationTel, locationNom;
-    private Button homeBtn6, consejosBtn6, reportBtn6, perfilBtn6, puntosBtn6, pBtn6, volverBtn;
+    private Button homeBtn6, consejosBtn6, reportBtn6, perfilBtn6, puntosBtn6, volverBtn;
     private String name;
 
     @Override
@@ -41,7 +41,6 @@ public class MapaActivity extends AppCompatActivity implements View.OnClickListe
         locationHor = findViewById(R.id.locationHor);
         locationTel = findViewById(R.id.locationTel);
 
-        pBtn6 = findViewById(R.id.pBtn6);
         perfilBtn6 = findViewById(R.id.perfilBtn6);
         reportBtn6 = findViewById(R.id.reportBtn6);
         homeBtn6 = findViewById(R.id.homeBtn6);
@@ -49,7 +48,7 @@ public class MapaActivity extends AppCompatActivity implements View.OnClickListe
         consejosBtn6 = findViewById(R.id.consejosBtn6);
         volverBtn = findViewById(R.id.volverBtn);
 
-        pBtn6.setOnClickListener(this);
+
         perfilBtn6.setOnClickListener(this);
         reportBtn6.setOnClickListener(this);
         homeBtn6.setOnClickListener(this);
@@ -108,27 +107,27 @@ public class MapaActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(vo);
                 finish();
                 break;
-            case R.id.reportBtn:
+            case R.id.reportBtn6:
                 Intent r = new Intent(this, ReportarActivity.class);
                 startActivity(r);
                 finish();
                 break;
-            case R.id.puntosBtn:
+            case R.id.puntosBtn6:
                 Intent pu = new Intent(this, MapaListActivity.class);
                 startActivity(pu);
                 finish();
                 break;
-            case R.id.homeBtn:
+            case R.id.homeBtn6:
                 Intent h = new Intent(this, MainActivity.class);
                 startActivity(h);
                 finish();
                 break;
-            case R.id.consejosBtn:
+            case R.id.consejosBtn6:
                 Intent c = new Intent(this, ConsejosActivity.class);
                 startActivity(c);
                 finish();
                 break;
-            case R.id.perfilBtn:
+            case R.id.perfilBtn6:
                 Intent pe = new Intent(this, PerfilActivity.class);
                 startActivity(pe);
                 finish();
