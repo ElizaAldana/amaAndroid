@@ -46,8 +46,6 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
         puntosBtn2 = findViewById(R.id.puntosBtn2);
         perfilBtn2 = findViewById(R.id.perfilBtn2);
         consejosBtn2 = findViewById(R.id.consejosBtn2);
-        pBtn2 = findViewById(R.id.pBtn2);
-        cerrarBtn2 = findViewById(R.id.cerrarBtn2);
         publiBtn = findViewById(R.id.publiBtn);
 
         tituloEt = findViewById(R.id.tituloEt);
@@ -59,8 +57,6 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
         puntosBtn2.setOnClickListener(this);
         perfilBtn2.setOnClickListener(this);
         consejosBtn2.setOnClickListener(this);
-        pBtn2.setOnClickListener(this);
-        cerrarBtn2.setOnClickListener(this);
         publiBtn.setOnClickListener(this);
 
         adapter = new ConsejoAdapter();
@@ -123,12 +119,6 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()){
 
-            case R.id.pBtn2:
-                cerrarBtn2.setVisibility(View.VISIBLE);
-                break;
-            case R.id.cerrarBtn2:
-                finish();
-                break;
             case R.id.perfilBtn2:
                 Intent b = new Intent(this, PerfilActivity.class);
                 startActivity(b);

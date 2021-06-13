@@ -19,6 +19,7 @@ public class PerfilActivity extends AppCompatActivity {
 
     private TextView userId, emailId, ciudadId;
     private Button perfilBtn3, reportBtn3, homeBtn3, puntosBtn3, consejosBtn3;
+    private ListView
 
     private ListView
     private FirebaseDatabase db;
@@ -90,10 +91,12 @@ public class PerfilActivity extends AppCompatActivity {
                 Intent h = new Intent(this, MainActivity.class);
                 startActivity(h);
                 finishAfterTransition();
+                break;
             case R.id.puntosBtn3:
                 Intent p = new Intent(this, AddLocationActivity.class);
                 startActivity(p);
                 finishAfterTransition();
+                break;
             case R.id.consejosBtn3:
                 Intent a = new Intent(this, ConsejosActivity.class);
                 startActivity(a);
