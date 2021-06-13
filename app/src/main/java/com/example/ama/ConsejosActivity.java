@@ -134,6 +134,11 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(d);
                 finish();
                 break;
+            case R.id.puntosBtn2:
+                Intent p = new Intent(this, AddLocationActivity.class);
+                startActivity(p);
+                finish();
+                break;
             case R.id.publiBtn:
                 String id = db.getReference().child("consejos").push().getKey();
                 DatabaseReference reference = db.getReference().child("consejos").child(id);
