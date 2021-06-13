@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ama">
-        <activity android:name=".AddLocationActivity"></activity>
+        <activity android:name=".MapaActivity"></activity>
+        <activity android:name=".AddLocationActivity" />
         <activity android:name=".MapaListActivity" />
         <activity android:name=".ReportarActivity" />
         <activity android:name=".PerfilActivity" />

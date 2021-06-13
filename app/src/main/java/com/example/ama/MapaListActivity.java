@@ -26,8 +26,7 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
     private FirebaseDatabase db;
     private ListView lugaresList;
     private Button perfilBtn4, puntosBtn4, consejosBtn4, pBtn4,reportBtn4, homeBtn4, agregarLugarBtn;
-    private ArrayList<Location> dataLocations;
-    private ArrayAdapter<Location> adapter;
+    private LocationAdaptador adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +43,7 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
         agregarLugarBtn = findViewById(R.id.agregarLugarBtn);
         lugaresList = findViewById(R.id.lugaresList);
 
-        dataLocations = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dataLocations);
+        adapter = new LocationAdaptador();
         lugaresList.setAdapter(adapter);
 
         perfilBtn4.setOnClickListener(this);
@@ -57,6 +55,8 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
 
         loadDatabase();
 
+
+
     }
 
     private void loadDatabase() {
@@ -65,12 +65,11 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
                 new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot data) {
-                        dataLocations.clear();
+                        adapter.clear();
                         for(DataSnapshot child : data.getChildren()){
-                            Location locationN = child.getValue(Location.class);
-                            dataLocations.add(locationN);
+                            Location location = child.getValue(Location.class);
+                            adapter.addLocation(location);
                         }
-                        adapter.notifyDataSetChanged();
 
                     }
 
