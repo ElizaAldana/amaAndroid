@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -16,20 +17,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ConsejoAdapter extends BaseAdapter {
+public class FavoritosAdapter extends BaseAdapter {
 
     //Data
     private ArrayList<Consejos> consejos;
-    private FirebaseDatabase db;
     private FirebaseAuth auth;
     private String idUser;
-    private String consejosFavoritos;
-    private String tituloFavoritos;
-    private String nombreFavoritos;
 
-    public ConsejoAdapter() {
+    public FavoritosAdapter() {
         consejos = new ArrayList<>();
-        db = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
     }
 
@@ -62,36 +58,27 @@ public class ConsejoAdapter extends BaseAdapter {
     @Override
     public View getView(int pos, View renglon, ViewGroup lista) {
         LayoutInflater inflater = LayoutInflater.from(lista.getContext());
-        View renglonView = inflater.inflate(R.layout.row, null);
+        View renglonView = inflater.inflate(R.layout.rowperfil, null);
 
         Consejos consejo = consejos.get(pos);
 
-        TextView tituloView = renglonView.findViewById(R.id.tituloView);
-        TextView nombreView = renglonView.findViewById(R.id.nombreView);
-        TextView advView = renglonView.findViewById(R.id.advView);
-        TextView responderBtn = renglonView.findViewById(R.id.responderBtn);
+        TextView tituloPerf = renglonView.findViewById(R.id.tituloPerf);
+        TextView nombrePerf = renglonView.findViewById(R.id.nombrePerf);
+        TextView advPerf = renglonView.findViewById(R.id.advPerf);
+        Button deleteButton = renglonView.findViewById(R.id.deleteButton);
 
-        tituloView.setText(consejo.getTitulo());
-        nombreView.setText("@"+consejo.getNombre());
-        advView.setText(consejo.getConsejos());
+        tituloPerf.setText(consejo.getTitulo());
+        nombrePerf.setText("@"+consejo.getNombre());
+        advPerf.setText(consejo.getConsejos());
 
-
-
-        responderBtn.setOnClickListener(
+        deleteButton.setOnClickListener(
                 (v) -> {
                     if(auth.getCurrentUser() != null){
                         idUser = auth.getCurrentUser().getUid();
                     }
-                    String idConsejos = consejo.getId();
-
-                    DatabaseReference reference = db.getReference().child("Favoritos").child(idUser).child(idConsejos);
-                    Consejos favoritos = new Consejos(
-                            nombreFavoritos = consejo.getNombre(),
-                            consejosFavoritos = consejo.getConsejos(),
-                            idConsejos,
-                            tituloFavoritos = consejo.getTitulo()
-                    );
-                    reference.setValue(favoritos);
+                    String id = consejo.getId();
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Favoritos").child(idUser).child(id);
+                    reference.setValue(null);
                 }
         );
 

@@ -88,6 +88,7 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
             case R.id.homeBtn4:
                 Intent h = new Intent(this, MainActivity.class);
                 startActivity(h);
+                finish();
                 break;
             case R.id.reportBtn4:
                 Intent r = new Intent(this, ReportarActivity.class);
@@ -114,6 +115,7 @@ public class MapaListActivity extends AppCompatActivity implements View.OnClickL
 
                 Intent a = new Intent(this, AddLocationActivity.class);
                 startActivity(a);
+                finish();
 
                 break;
         }

@@ -57,36 +57,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 cerrarBtn.setVisibility(View.VISIBLE);
                 break;
             case R.id.cerrarBtn:
+                Intent s = new Intent(this, LoginActivity.class);
+                startActivity(s);
                 finish();
                 break;
             case R.id.perfilBtn:
                 Intent b = new Intent(this, PerfilActivity.class);
                 startActivity(b);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.reportBtn:
                 Intent c = new Intent(this, ReportarActivity.class);
                 startActivity(c);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.consejosBtn:
+            case R.id.consBtn:
                 Intent a = new Intent(this, ConsejosActivity.class);
                 startActivity(a);
-                break;
-           case R.id.consBtn:
-                Intent e = new Intent(this, ConsejosActivity.class);
-                startActivity(e);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.puntosBtn:
                 Intent p = new Intent(this, AddLocationActivity.class);
                 startActivity(p);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.mapBtn:
                 Intent m = new Intent(this, MapaListActivity.class);
                 startActivity(m);
-                finishAfterTransition();
+                finish();
                 break;
 
         }

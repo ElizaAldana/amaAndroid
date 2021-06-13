@@ -103,6 +103,7 @@ public class MapaActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.volverBtn:
+            case R.id.puntosBtn6:
                 Intent vo = new Intent(this, MapaListActivity.class);
                 startActivity(vo);
                 finish();
@@ -110,11 +111,6 @@ public class MapaActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.reportBtn6:
                 Intent r = new Intent(this, ReportarActivity.class);
                 startActivity(r);
-                finish();
-                break;
-            case R.id.puntosBtn6:
-                Intent pu = new Intent(this, MapaListActivity.class);
-                startActivity(pu);
                 finish();
                 break;
             case R.id.homeBtn6:

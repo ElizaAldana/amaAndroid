@@ -42,29 +42,30 @@ public class ReportarActivity extends AppCompatActivity implements View.OnClickL
             case R.id.perfilBtnr:
                 Intent b = new Intent(this, PerfilActivity.class);
                 startActivity(b);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.reportBtnr:
                 Intent c = new Intent(this, ReportarActivity.class);
                 startActivity(c);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.homeBtnr:
                 Intent h = new Intent(this, MainActivity.class);
                 startActivity(h);
-                finishAfterTransition();
+                finish();
             case R.id.puntosBtnr:
                 Intent p = new Intent(this, AddLocationActivity.class);
                 startActivity(p);
-                finishAfterTransition();
+                finish();
             case R.id.consejosBtnr:
                 Intent a = new Intent(this, ConsejosActivity.class);
                 startActivity(a);
+                finish();
                 break;
             case R.id.reportarBtn1:
                 Intent re = new Intent(this, MainActivity.class);
                 startActivity(re);
-                finishAfterTransition();
+                finish();
 
 
         }

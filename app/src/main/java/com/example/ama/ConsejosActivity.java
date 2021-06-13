@@ -122,17 +122,17 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
             case R.id.perfilBtn2:
                 Intent b = new Intent(this, PerfilActivity.class);
                 startActivity(b);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.reportBtn2:
                 Intent c = new Intent(this, ReportarActivity.class);
                 startActivity(c);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.homeBtn2:
                 Intent d = new Intent(this, MainActivity.class);
                 startActivity(d);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.publiBtn:
                 String id = db.getReference().child("consejos").push().getKey();
@@ -144,6 +144,8 @@ public class ConsejosActivity extends AppCompatActivity implements View.OnClickL
                         tituloEt.getText().toString()
                 );
                 reference.setValue(consejo);
+                advTv.setText("");
+                tituloEt.setText("");
                 break;
 
 

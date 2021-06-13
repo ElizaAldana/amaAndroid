@@ -23,9 +23,12 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
     private ListView favTv;
     private FirebaseDatabase db;
     private FirebaseAuth auth;
-    private ConsejoAdapter adapter;
+    private FavoritosAdapter adapter;
 
-
+    private String idFavoritos;
+    private String consejosFavoritos;
+    private String tituloFavoritos;
+    private String nombreFavoritos;
 
 
     @Override
@@ -54,7 +57,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
         db = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
-        adapter = new ConsejoAdapter();
+        adapter = new FavoritosAdapter();
         favTv.setAdapter(adapter);
 
         recoverUser();
@@ -110,6 +113,7 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
                 }
         );
     }
+
 
     public void onClick(View v) {
         switch (v.getId()) {

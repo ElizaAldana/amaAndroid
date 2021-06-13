@@ -63,10 +63,31 @@ public class AddLocationActivity extends AppCompatActivity implements View.OnCli
                 ref.setValue(location);
                 Intent a = new Intent(this, MapaListActivity.class);
                 startActivity(a);
+                finish();
+
                 break;
             case R.id.homeBtn5:
                 Intent h = new Intent(this, MapaListActivity.class);
                 startActivity(h);
+                finish();
+                break;
+            case R.id.perfilBtn5:
+                Intent b = new Intent(this, PerfilActivity.class);
+                startActivity(b);
+                finish();
+                break;
+            case R.id.reportBtn5:
+                Intent c = new Intent(this, ReportarActivity.class);
+                startActivity(c);
+                finish();
+                break;
+            case R.id.puntosBtn5:
+                Intent p = new Intent(this, AddLocationActivity.class);
+                startActivity(p);
+                finish();
+            case R.id.consejosBtn5:
+                Intent w = new Intent(this, ConsejosActivity.class);
+                startActivity(w);
                 finish();
                 break;
         }
