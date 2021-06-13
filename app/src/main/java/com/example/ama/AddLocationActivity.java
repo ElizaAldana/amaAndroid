@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddLocationActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button perfilBtn5, puntosBtn5, consejosBtn5, pBtn5, reportBtn5, homeBtn5, addLocationBtn;
+    private Button perfilBtn5, puntosBtn5, consejosBtn5, reportBtn5, homeBtn5, addLocationBtn;
     private EditText puntoName, puntoDesc, puntoDir, puntoTel, puntoHor;
     private FirebaseDatabase db;
 
@@ -25,7 +25,6 @@ public class AddLocationActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_add_location);
 
         db = FirebaseDatabase.getInstance();
-        pBtn5 = findViewById(R.id.pBtn5);
         perfilBtn5 = findViewById(R.id.perfilBtn5);
         puntosBtn5 = findViewById(R.id.puntosBtn5);
         consejosBtn5 = findViewById(R.id.consejosBtn5);

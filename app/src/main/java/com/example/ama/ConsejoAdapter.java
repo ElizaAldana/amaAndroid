@@ -64,17 +64,24 @@ public class ConsejoAdapter extends BaseAdapter {
     public View getView(int pos, View renglon, ViewGroup lista) {
         LayoutInflater inflater = LayoutInflater.from(lista.getContext());
         View renglonView = inflater.inflate(R.layout.row, null);
+        View renglonView2 = inflater.inflate(R.layout.rowperfil, null);
 
         Consejos consejo = consejos.get(pos);
 
-        TextView tituloView = renglonView.findViewById(R.id.tituloPerf);
+        TextView tituloView = renglonView.findViewById(R.id.tituloView);
         TextView nombreView = renglonView.findViewById(R.id.nombreView);
         TextView advView = renglonView.findViewById(R.id.advView);
         TextView responderBtn = renglonView.findViewById(R.id.responderBtn);
 
+        TextView tituloPerf = renglonView2.findViewById(R.id.tituloPerf);
+        TextView nombrePerf = renglonView2.findViewById(R.id.nombrePerf);
+        TextView advPerf = renglonView2.findViewById(R.id.advPerf);
+
         tituloView.setText(consejo.getTitulo());
         nombreView.setText("@"+consejo.getNombre());
         advView.setText(consejo.getConsejos());
+
+        tituloPerf.setText(tituloFavoritos);
 
 
         DatabaseReference ref = db.getReference().child("consejos");

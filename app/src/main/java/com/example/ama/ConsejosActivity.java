@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class ConsejosActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button reportBtn2, homeBtn2, puntosBtn2, perfilBtn2, consejosBtn2, pBtn2, cerrarBtn2, publiBtn;
+    private Button reportBtn2, homeBtn2, puntosBtn2, perfilBtn2, consejosBtn2, publiBtn;
     private ListView dataTv;
     private EditText tituloEt, advTv;
     private ConsejoAdapter adapter;

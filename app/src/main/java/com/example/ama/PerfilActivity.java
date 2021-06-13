@@ -12,18 +12,19 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class PerfilActivity extends AppCompatActivity {
+public class PerfilActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView userId, emailId, ciudadId;
     private Button perfilBtn3, reportBtn3, homeBtn3, puntosBtn3, consejosBtn3;
-    private ListView
-
-    private ListView
+    private ListView favTv;
     private FirebaseDatabase db;
     private FirebaseAuth auth;
+    private ConsejoAdapter adapter;
+
 
 
 
@@ -35,21 +36,29 @@ public class PerfilActivity extends AppCompatActivity {
         userId = findViewById(R.id.userId);
         emailId = findViewById(R.id.emailId);
         ciudadId = findViewById(R.id.ciudadId);
+        favTv = findViewById(R.id.favTv);
 
         perfilBtn3 = findViewById(R.id.perfilBtn3);
         reportBtn3 = findViewById(R.id.reportBtn3);
         homeBtn3 = findViewById(R.id.homeBtn3);
         puntosBtn3 = findViewById(R.id.puntosBtn3);
         consejosBtn3 = findViewById(R.id.consejosBtn3);
+        favTv = findViewById(R.id.favTv);
 
-
-
+        perfilBtn3.setOnClickListener(this);
+        reportBtn3.setOnClickListener(this);
+        homeBtn3.setOnClickListener(this);
+        puntosBtn3.setOnClickListener(this);
+        consejosBtn3.setOnClickListener(this);
 
         db = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
+        adapter = new ConsejoAdapter();
+        favTv.setAdapter(adapter);
 
         recoverUser();
+        loadDatabase();
 
     }
 
@@ -77,6 +86,29 @@ public class PerfilActivity extends AppCompatActivity {
                     }
             );
         }
+    }
+
+    //Me pinta pero quiero guardar solo los favoritos
+    private void loadDatabase() {
+        String idUser = auth.getCurrentUser().getUid();
+        DatabaseReference ref = db.getReference().child("Favoritos").child(idUser);
+        ref.addValueEventListener(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot data) {
+                        adapter.clear();
+                        for (DataSnapshot child : data.getChildren()){
+                            Consejos consejo = child.getValue(Consejos.class);
+                            adapter.addConsejo(consejo);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError error) {
+
+                    }
+                }
+        );
     }
 
     public void onClick(View v) {
