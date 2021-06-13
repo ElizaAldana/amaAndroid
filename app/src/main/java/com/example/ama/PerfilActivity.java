@@ -121,21 +121,22 @@ public class PerfilActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.reportBtn3:
                 Intent c = new Intent(this, ReportarActivity.class);
                 startActivity(c);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.homeBtn3:
                 Intent h = new Intent(this, MainActivity.class);
                 startActivity(h);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.puntosBtn3:
                 Intent p = new Intent(this, AddLocationActivity.class);
                 startActivity(p);
-                finishAfterTransition();
+                finish();
                 break;
             case R.id.consejosBtn3:
                 Intent a = new Intent(this, ConsejosActivity.class);
                 startActivity(a);
+                finish();
                 break;
         }
     }
